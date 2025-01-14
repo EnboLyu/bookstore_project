@@ -3,9 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>NU Book Lounge (NBL)</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+            position: relative;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .navbar a:hover {
+            background-color: #666;
+            border-radius: 5px;
+        }
+        .categories-dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            width: 200px;
+            padding: 10px;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .categories-dropdown ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        .categories-dropdown li {
+            padding: 10px;
+            background-color: #ddd;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+        .categories-dropdown li:hover {
+            background-color: #bbb;
+        }
+        main {
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style> -->
+    <!-- <script>
+        function toggleCategories(event) {
+            event.stopPropagation();
+            var categoryDropdown = document.querySelector(".categories-dropdown");
+            categoryDropdown.style.display = categoryDropdown.style.display === "none" || categoryDropdown.style.display === "" ? "block" : "none";
+        }
+        
+        document.addEventListener("click", function(event) {
+            var categoryDropdown = document.querySelector(".categories-dropdown");
+            var categoriesButton = document.querySelector(".navbar a:nth-child(2)");
+            
+            if (!categoryDropdown.contains(event.target) && event.target !== categoriesButton) {
+                categoryDropdown.style.display = "none";
+            }
+        });
+    </script> -->
 </head>
 <body>
+    <header>
+        <h1>NU Book Lounge</h1>
+        <!-- <p>Discover and Read Your Favorite Books</p> -->
+    </header>
     
+    <nav class="navbar">
+        <a href="#home">Home</a>
+        <a onclick="toggleCategories(event)">Categories</a>
+        <a href="#new-books">New Books</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="categories-dropdown">
+        <ul>
+            <li>Early Readers</li>
+            <li>Adults</li>
+            <li>Economic</li>
+            <li>History</li>
+            <li>Travel</li>
+        </ul>
+    </div>
+    
+    <main>
+
+        <section class="new-books" id="new-books">
+            <h2 style="background-color: black; color: white; text-align: center; padding: 10px;">What is New?</h2>
+            <h2>New Books Updated</h2>
+            <form style="display: flex; justify-content: center;">
+                <table style="border: none; text-align: center;">
+                    <thead>
+                        <tr>
+                            <th>Book Name</th>
+                            <th>Date for Update</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>"The Economic Growth"</td>
+                            <td>Jan 11</td>
+                        </tr>
+                        <tr>
+                            <td>"Historical Insights"</td>
+                            <td>Dec 11</td>
+                        </tr>
+                        <tr>
+                            <td>"Travel Diaries"</td>
+                            <td>Nov 11</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </section>
+    </main>
+    
+    <!-- <footer>
+        <p>&copy; 2025 NU Book Lounge. All rights reserved.</p>
+    </footer> -->
 </body>
 </html>
